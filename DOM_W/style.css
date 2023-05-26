@@ -114,8 +114,42 @@ body {
   border-radius: 8px;
   overflow: hidden;
   transition: all 0.3s ease-in;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 .modal.active {
+  padding: 8px;
+
   height: 700px;
   width: 400px;
+}
+.modal-item {
+  display: flex;
+  padding: 8px 4px;
+  background-color: rgba(95, 158, 160, 0.598);
+  border-radius: 8px;
+  align-items: center;
+  justify-content: space-between;
+}
+.quantity {
+  gap: 16px;
+  display: flex;
+  align-items: center;
+}
+.minus,
+.plus {
+  font-size: 30px;
+  cursor: pointer;
+}
+.modal-item h2 {
+  font-size: 18px;
+}
+.total {
+  align-self: flex-end;
+  position: absolute;
+  bottom: 8px;
+}
+i {
+  cursor: pointer;
 }
