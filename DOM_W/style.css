@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.product-card {
+  height: fit-content;
+  position: relative;
+  width: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.24);
+}
+.product-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.product-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.product-content .header {
+  display: flex;
+  justify-content: space-between;
+}
+.product-content p {
+  color: grey;
+  font-size: 14px;
+}
+.stars i {
+  font-size: 16px;
+  color: goldenrod;
+}
+.product-content input {
+  padding: 8px 16px;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 24px;
+  width: fit-content;
+  transition: all 0.1s ease-in;
+}
+
+.product-content input:hover {
+  background-color: darkgreen;
+  color: white;
+  border-color: white;
+  cursor: pointer;
+}
+.fav {
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+}
+.fav i {
+  color: rgb(251, 34, 34);
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  gap: 32px;
+}
+.cart-button {
+  height: 60px;
+  width: 60px;
+  background-color: cadetblue;
+  border-radius: 50%;
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  transition: all 0.2s ease-in-out;
+}
+.cart-button:hover {
+  background-color: rgba(95, 158, 160, 0.598);
+  cursor: pointer;
+}
+.modal {
+  height: 0;
+  width: 0;
+  background-color: white;
+  position: fixed;
+  top: 72px;
+  right: 72px;
+  box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.24);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+}
+.modal.active {
+  height: 700px;
+  width: 400px;
+}
